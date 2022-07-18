@@ -1,3 +1,6 @@
+
+//this code is the original. It will ask the user when opening the page to input rock paper or scissors, repeat 5 times, and then tell you how many wins/losses you received
+
 let winCount=0;
 let loseCount=0;
 let tieCount=0;
@@ -9,16 +12,6 @@ for (let i = 0; i < 5; i++) {
 let playersChoice=prompt('Please choose rock, paper, or scissors. Entering anything else will cause you to forfeit.');
 playersChoice=playersChoice.toLowerCase();
 
-function checkInput(){
-        
-    if (playersChoice!='rock'&&playersChoice!='paper'&&playersChoice!='scissors'){
-        alert('please make a valid choice.');
-        return;
-    }
-}
-
-checkInput();
-
 function getComputerChoice(){
         let pcChoices=['rock','paper','scissors'];
         let choice = Math.floor(Math.random()*pcChoices.length);
@@ -28,9 +21,6 @@ function getComputerChoice(){
 
 function play(playerSelection, pcSelection){
 
-
-
-
     if (playerSelection===pcSelection){
         tieCount++;
         let tie=`It's a tie! You both chose ${pcSelection}.`;
@@ -38,10 +28,10 @@ function play(playerSelection, pcSelection){
         //console.log(score);
 
     } else if (playerSelection==='rock' && pcSelection==='scissors' || playerSelection==='scissors' && pcSelection==='paper'||playerSelection==='paper' && pcSelection==='rock'){
-        
         winCount++;
-        let winText=`You won! Congratulations. Your ${playerSelection} beat the computers ${pcSelection}.`;
+        let winText=`Your ${playerSelection} beat the computers ${pcSelection}.`;
         console.log(winText);
+        
         //console.log(score);
 
     } else {
@@ -52,8 +42,15 @@ function play(playerSelection, pcSelection){
     };
 };
 
-play(playersChoice,getComputerChoice());
+function updateScore(){
+    document.getElementById('myScore').innerHTML=`Your Score: ${winCount}`;
+    document.getElementById('ties').innerHTML= `Ties: ${tieCount}`;
+    document.getElementById('pcScore').innerHTML= `Liars Scores: ${loseCount}`;
+}
 
+
+play(playersChoice,getComputerChoice());
+updateScore();
 };
 
 let score=`You won ${winCount} times, lost ${loseCount} times, and tied ${tieCount} times.`
@@ -70,3 +67,8 @@ if(winCount>loseCount){
 };
 
 game();
+
+
+//below code will pull the users choice depending on which image they click on
+//include more displays using JS to pull info from document
+
