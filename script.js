@@ -62,7 +62,7 @@ function updateScore(){
     document.getElementById('ties').innerHTML= `Ties: ${tieCount}`;
     document.getElementById('pcScore').innerHTML= `Liars Scores: ${loseCount}`;
     document.getElementById('playersRoundChoice').innerHTML=`You chose ${playersChoice}`;
-    document.getElementById('pcRoundChoice').innerHTML=`Computer chose ${getComputerChoice()}`;
+    document.getElementById('pcRoundChoice').innerHTML=`Computer chose ${pcRoundChoice}`;
 };
 
 function resetPlayerChoice(){
