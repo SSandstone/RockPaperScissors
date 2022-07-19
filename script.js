@@ -76,6 +76,8 @@ function resetGame(){
     loseCount=0;
     tieCount=0;
     updateScore();
+    document.getElementById('pcRoundChoice').innerHTML=`Opponent Chose:`;
+    document.getElementById('playersRoundChoice').innerHTML=`You Chose:`;
 }
 
 function gameOver() {
