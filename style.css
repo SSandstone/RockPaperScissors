@@ -116,7 +116,7 @@ img:hover{
 .footer{
     display:flex;
     margin-top: auto;
-    margin-bottom:0;
+    padding:0px;
     justify-content: center;
     align-items: center;
 }
