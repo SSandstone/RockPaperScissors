@@ -61,6 +61,21 @@ body {
     text-align: center;
 }
 
+.scoreboard{
+    display:flex;
+    flex-direction:column;
+}
+
+.scores{
+    display:flex;
+    justify-content:space-between;
+}
+
+.choices{
+    display:flex;   
+    justify-content:space-between;
+}
+
 .cards {
     display: flex;
     flex-direction: column;
