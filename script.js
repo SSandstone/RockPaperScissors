@@ -76,8 +76,6 @@ function resetGame(){
     loseCount=0;
     tieCount=0;
     updateScore();
-    document.getElementById('playersRoundChoice').innerHTML=`Waiting for choice`;
-    document.getElementById('pcRoundChoice').innerHTML=`Waiting for choice`;
 }
 
 function gameOver() {
