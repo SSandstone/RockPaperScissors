@@ -4,7 +4,7 @@
 let winCount=0;
 let loseCount=0;
 let tieCount=0;
-
+//I think I need add a function to play the game if (playersChoice != null) and then reset the players choice at the end of game()
 function game(){
 
 for (let i = 0; i < 5; i++) {
