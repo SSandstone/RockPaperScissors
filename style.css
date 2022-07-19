@@ -38,6 +38,8 @@ body {
     align-items: center;
     justify-content: center;
     height:100%;
+    padding:15px;
+    margin-bottom:20px;
 }
 
 .score{
