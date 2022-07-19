@@ -40,7 +40,7 @@ function getComputerChoice(){
     let pcChoices=['rock','paper','scissors'];
     let choice = Math.floor(Math.random()*pcChoices.length);
     let pcRoundChoice=pcChoices[choice];
-    document.getElementById('pcRoundChoice').innerHTML=`You Chose: ${pcRoundChoice}`;
+    document.getElementById('pcRoundChoice').innerHTML=`Opponent Chose: ${pcRoundChoice}`;
     return pcRoundChoice;
     };
 
