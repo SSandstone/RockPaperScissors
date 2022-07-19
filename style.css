@@ -8,17 +8,14 @@ body {
     background-color: antiquewhite;
 }
 
-.header{
-    background-color: #1f2937;
-    width:100%;
-    color:aliceblue;
-}
-
 .header {
     display: flex;
     align-items: center;
     justify-content: space-around;
     gap:20px;
+    background-color: #1f2937;
+    width:100%;
+    color:aliceblue;
 }
 
 #title{
@@ -36,10 +33,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height:100%;
     padding:15px;
-    margin-bottom:20px;
 }
 
 .info{
@@ -116,8 +110,7 @@ img:hover{
     background-color: #1f2937;
     width:100%;
     color:aliceblue;
-   /* margin-top: auto;
-    padding:0px; */
+    margin-top: auto;
     justify-content: center;
     align-items: center;
 }
