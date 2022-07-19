@@ -8,7 +8,7 @@ body {
     background-color: antiquewhite;
 }
 
-.header, .footer{
+.header{
     background-color: #1f2937;
     width:100%;
     color:aliceblue;
@@ -68,12 +68,10 @@ body {
     justify-content:space-between;
 }
 
-
 .info p{
     font-size: large;
     text-align: center;
 }
-
 
 .cards {
     display: flex;
@@ -115,8 +113,11 @@ img:hover{
 
 .footer{
     display:flex;
-    margin-top: auto;
-    padding:0px;
+    background-color: #1f2937;
+    width:100%;
+    color:aliceblue;
+   /* margin-top: auto;
+    padding:0px; */
     justify-content: center;
     align-items: center;
 }
