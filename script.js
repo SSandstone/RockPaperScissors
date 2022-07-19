@@ -1,11 +1,96 @@
+//updated code to work off click events instead of input box.
+
+let rock=document.getElementById('rock');
+let paper=document.getElementById('paper');
+let scissors=document.getElementById('scissors');
+let playersChoice='';
+
+let winCount=0;
+let loseCount=0;
+let tieCount=0;
+
+rock.addEventListener('click', function(){
+    playersChoice='rock';
+    play(playersChoice,getComputerChoice());
+    updateScore();
+    resetPlayerChoice();
+    gameOver();
+});
+
+paper.addEventListener('click', function(){
+    playersChoice='paper';
+    play(playersChoice,getComputerChoice());
+    updateScore();
+    resetPlayerChoice();
+    gameOver();
+});
+
+scissors.addEventListener('click', function(){
+    playersChoice='scissors';
+    play(playersChoice,getComputerChoice());
+    updateScore();
+    resetPlayerChoice();
+    gameOver();
+});
+
+function getComputerChoice(){
+    let pcChoices=['rock','paper','scissors'];
+    let choice = Math.floor(Math.random()*pcChoices.length);
+    let pcRoundChoice=pcChoices[choice];
+    return pcRoundChoice;
+    };
+
+function play(playerSelection, pcSelection){
+
+    if (playerSelection===pcSelection){
+        tieCount++;
+        let tie=`It's a tie! You both chose ${pcSelection}.`;
+        console.log(tie);
+    } else if (playerSelection==='rock' && pcSelection==='scissors' || playerSelection==='scissors' && pcSelection==='paper'||playerSelection==='paper' && pcSelection==='rock'){
+        winCount++;
+        let winText=`Your ${playerSelection} beat the computers ${pcSelection}.`;
+        console.log(winText);
+    } else {
+        loseCount++;
+        let loseText=`You lost this round! Don't give up. The computer chose ${pcSelection} and beat your ${playerSelection}.`;
+        console.log(loseText);
+    };
+};
+
+function updateScore(){
+    document.getElementById('myScore').innerHTML=`Your Score: ${winCount}`;
+    document.getElementById('ties').innerHTML= `Ties: ${tieCount}`;
+    document.getElementById('pcScore').innerHTML= `Liars Scores: ${loseCount}`;
+};
+
+function resetPlayerChoice(){
+    let playersChoice='';
+};
+
+function resetGame(){
+    winCount=0;
+    loseCount=0;
+    tieCount=0;
+    updateScore();
+}
+
+function gameOver() {
+    if (winCount===5){
+        alert('YOU DID IT. THE TRUTH PREVAILS!')
+        resetGame();
+    } else if (loseCount===5){
+        alert('SHEEP. SHEEP. THE TRUTH IS LOST.')
+        resetGame();
+    };
+};
+
+/*
 
 //this code is the original. It will ask the user when opening the page to input rock paper or scissors, repeat 5 times, and then tell you how many wins/losses you received
 
 let winCount=0;
 let loseCount=0;
 let tieCount=0;
-//I think I need add a function to play the game if (playersChoice != null) and then reset the players choice at the end of game()
-function game(){
 
 for (let i = 0; i < 5; i++) {
 
@@ -68,7 +153,5 @@ if(winCount>loseCount){
 
 game();
 
-
-//below code will pull the users choice depending on which image they click on
-//include more displays using JS to pull info from document
+*/
 
