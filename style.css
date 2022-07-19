@@ -60,15 +60,36 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:25px;
+    gap:40px;
+}
+
+.topcard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottomcards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:40px;
 }
 
 #rock, #paper, #scissors{
     max-width:200px;
     margin:10px;
-    padding:10px;
-    border: 1px solid #1f2937;
+    padding:2px;
     border-radius: 15px;
+}
+
+img:hover{
+    position: relative;
+    top: 1px;
+    left:1px;
+    opacity:0.8;
+    cursor: pointer;
+    filter: drop-shadow(8px 8px 10px rgb(60, 0, 95)) invert(50%);
 }
 
 .footer{
