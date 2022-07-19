@@ -11,15 +11,13 @@ body {
 .header, .footer{
     background-color: #1f2937;
     width:100%;
-    height:15%;
     color:aliceblue;
 }
-
 
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     gap:20px;
 }
 
@@ -31,7 +29,7 @@ body {
 #goBack {
     margin:12px 12px 12px auto;
     padding:12px;
-    font-size:16px;
+    font-size:18px;
 }
 
 .content {
@@ -39,7 +37,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height:70%;
+    height:100%;
 }
 
 .score{
@@ -119,6 +117,7 @@ img:hover{
 .footer{
     display:flex;
     margin-top: auto;
+    margin-bottom:0;
     justify-content: center;
     align-items: center;
 }
