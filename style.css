@@ -42,12 +42,6 @@ body {
     margin-bottom:20px;
 }
 
-.score{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .info{
     display:flex;
     flex-direction:column;
@@ -58,11 +52,6 @@ body {
     padding:12px;
 }
 
-.info p{
-    font-size: large;
-    text-align: center;
-}
-
 .scoreboard{
     display:flex;
     flex-direction:column;
@@ -71,12 +60,20 @@ body {
 .scores{
     display:flex;
     justify-content:space-between;
+    align-items: center;
 }
 
 .choices{
     display:flex;   
     justify-content:space-between;
 }
+
+
+.info p{
+    font-size: large;
+    text-align: center;
+}
+
 
 .cards {
     display: flex;
