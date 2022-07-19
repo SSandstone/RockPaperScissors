@@ -67,13 +67,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap:20px;
 }
 
 .bottomcards{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap:40px;
+    gap:50px;
 }
 
 #rock, #paper, #scissors{
