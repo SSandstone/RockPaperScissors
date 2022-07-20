@@ -1,24 +1,26 @@
 body {
     display:flex;
     flex-direction:column;
-    align-items:center;
-    justify-content:space-between;
+    justify-content: space-between;
     margin:0;
     padding:0;
     width:100%;
     height:100vh;
+    overflow-x:hidden;
     background-color: antiquewhite;
+}
+
+.header,.footer{
+    background-color: #1f2937;
+    color:aliceblue;
+    padding:15px;
+    width:100%;
 }
 
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    gap:20px;
-    background-color: #1f2937;
-    width:100%;
-    height:120px;
-    color:aliceblue;
+    justify-content: space-between;
 }
 
 #title{
@@ -27,9 +29,8 @@ body {
 }
 
 #goBack {
-    margin:12px 12px 12px auto;
-    padding:12px;
-    font-size:18px;
+    margin:12px 36px 12px auto;
+    font-size:2em;
 }
 
 .content {
@@ -37,7 +38,6 @@ body {
     flex-direction: column;
     justify-content:center;
     align-items: center;
-    padding:15px;
 }
 
 .info{
@@ -45,8 +45,6 @@ body {
     flex-direction:column;
     align-items:center;
     text-align:center;
-    margin:12px;
-    padding:12px;
 }
 
 .scoreboard{
@@ -72,30 +70,18 @@ body {
 
 .cards {
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
     align-items: center;
-    gap:40px;
-}
-
-.topcard{
-    display: flex;
     justify-content: center;
-    align-items: center;
-    gap:20px;
+    gap:1em;
 }
 
-.bottomcards{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap:50px;
-}
-
-#rock, #paper, #scissors{
-    max-width:200px;
-    margin:10px;
-    padding:2px;
-    border-radius: 15px;
+.cards img{
+    width: 300px;
+    max-width:400px;
+    border:2px solid #1f2937;
+    border-radius: 12px;
+    flex:1 1 auto;
 }
 
 img:hover{
@@ -107,12 +93,9 @@ img:hover{
     filter: drop-shadow(8px 8px 10px rgb(60, 0, 95)) invert(50%);
 }
 
-.footer{
-    display:flex;
-    background-color: #1f2937;
-    width:100%;
-    color:aliceblue;
-    margin-top: auto;
-    justify-content: center;
-    align-items: center;
+.footer{  
+    display: flex;
+    flex-flow: column nowrap;
+    margin: auto 0 0 0;
+    text-align: center;
 }
