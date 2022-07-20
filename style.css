@@ -56,11 +56,13 @@ body {
     display:flex;
     justify-content:space-between;
     align-items: center;
+    gap:10px;
 }
 
 .choices{
     display:flex;   
     justify-content:space-between;
+    gap:10px;
 }
 
 .info p{
