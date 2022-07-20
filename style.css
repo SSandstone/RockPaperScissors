@@ -76,6 +76,7 @@ body {
     align-items: center;
     justify-content: center;
     gap:1em;
+    box-sizing:border-box;
 }
 
 .cards img{
