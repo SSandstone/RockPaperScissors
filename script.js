@@ -11,7 +11,7 @@ let tieCount=0;
 
 rock.addEventListener('click', function(){
     playersChoice='rock';
-    document.getElementById('playersRoundChoice').innerHTML=`You Chose: ${playersChoice}`;
+    document.getElementById('playersRoundChoice').innerHTML=` You Chose: ${playersChoice} `;
     play(playersChoice,getComputerChoice());
     updateScore();
     resetPlayerChoice();
@@ -20,7 +20,7 @@ rock.addEventListener('click', function(){
 
 paper.addEventListener('click', function(){
     playersChoice='paper';
-    document.getElementById('playersRoundChoice').innerHTML=`You Chose: ${playersChoice}`;
+    document.getElementById('playersRoundChoice').innerHTML=` You Chose: ${playersChoice} `;
     play(playersChoice,getComputerChoice());
     updateScore();
     resetPlayerChoice();
@@ -29,7 +29,7 @@ paper.addEventListener('click', function(){
 
 scissors.addEventListener('click', function(){
     playersChoice='scissors';
-    document.getElementById('playersRoundChoice').innerHTML=`You Chose: ${playersChoice}`;
+    document.getElementById('playersRoundChoice').innerHTML=` You Chose: ${playersChoice} `;
     play(playersChoice,getComputerChoice());
     updateScore();
     resetPlayerChoice();
@@ -40,7 +40,7 @@ function getComputerChoice(){
     let pcChoices=['rock','paper','scissors'];
     let choice = Math.floor(Math.random()*pcChoices.length);
     let pcRoundChoice=pcChoices[choice];
-    document.getElementById('pcRoundChoice').innerHTML=`Opponent Chose: ${pcRoundChoice}`;
+    document.getElementById('pcRoundChoice').innerHTML=` Opponent Chose: ${pcRoundChoice} `;
     return pcRoundChoice;
     };
 
@@ -76,8 +76,8 @@ function resetGame(){
     loseCount=0;
     tieCount=0;
     updateScore();
-    document.getElementById('pcRoundChoice').innerHTML=`Opponent Chose:`;
-    document.getElementById('playersRoundChoice').innerHTML=`You Chose:`;
+    document.getElementById('pcRoundChoice').innerHTML=` Opponent Chose:`;
+    document.getElementById('playersRoundChoice').innerHTML=`You Chose: `;
 }
 
 function gameOver() {
