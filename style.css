@@ -17,6 +17,7 @@ body {
     gap:20px;
     background-color: #1f2937;
     width:100%;
+    height:200px;
     color:aliceblue;
 }
 
@@ -112,6 +113,7 @@ img:hover{
     width:100%;
     color:aliceblue;
     margin-top: auto;
+    height:200px;
     justify-content: center;
     align-items: center;
 }
