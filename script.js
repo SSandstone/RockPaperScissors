@@ -62,9 +62,9 @@ function play(playerSelection, pcSelection){
 };
 
 function updateScore(){
-    document.getElementById('myScore').innerHTML=`Your Score: ${winCount}`;
-    document.getElementById('ties').innerHTML= `Ties: ${tieCount}`;
-    document.getElementById('pcScore').innerHTML= `Liars Scores: ${loseCount}`;
+    document.getElementById('myScore').innerHTML=` Your Score: ${winCount}` ;
+    document.getElementById('ties').innerHTML= ` Ties: ${tieCount}` ;
+    document.getElementById('pcScore').innerHTML= ` Liars Scores: ${loseCount} `;
 };
 
 function resetPlayerChoice(){
@@ -76,8 +76,8 @@ function resetGame(){
     loseCount=0;
     tieCount=0;
     updateScore();
-    document.getElementById('pcRoundChoice').innerHTML=` Opponent Chose:`;
-    document.getElementById('playersRoundChoice').innerHTML=`You Chose: `;
+    document.getElementById('pcRoundChoice').innerHTML=` Opponent Chose: `;
+    document.getElementById('playersRoundChoice').innerHTML=` You Chose: `;
 }
 
 function gameOver() {
